@@ -39,8 +39,6 @@ for byte in range(1, 16+1):
         hexified_broken_cookie = list(map(hex, broken_cookie))
         print("\033[96m" + hex(i) + "\033[0m", ", ".join(hexified_broken_cookie[:16]), "      ", "[" + int((i/256)*40)*"-" + (40-int((i/256)*40))*" " + "]") # fancy
 
-
-
 xor_string = [int(i, 16) for i in listy[::-1]] # reverse listy
 cut_xor_string = xor_string[16-len(cookie_dough):] # make same length from end
 
